@@ -20,7 +20,7 @@ function initMap() {
 
                 map.setCenter(currentLocation);
 
-                // Now, let's use the Places library to look for nearby gyms
+                // uses the Places library to look for nearby gyms
                 const request = {
                     location: currentLocation,
                     radius: '50000', // Search within a 50km radius
@@ -72,17 +72,15 @@ function createMarker(place, map) {
         infowindow.open(map, marker);
     });
 
-    // New: Add an entry to the sidebar for this place
     addToSidebar(place);
 }
 
-// New function to add a place entry to the sidebar
+// add a place entry to the sidebar
 function addToSidebar(place) {
     const sidebar = document.getElementById('sidebar');
     const placeDiv = document.createElement('div');
     placeDiv.classList.add('place-entry'); // Optional: for styling
 
-    // You can customize this content structure as needed
     placeDiv.innerHTML = `
         <h3>${place.name}</h3>
         <p>${place.vicinity}</p>
