@@ -92,3 +92,4 @@ function loadScript() {
 
 // Trigger script loading once the window has fully loaded
 window.onload = loadScript;
+//
