@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/calorie_calculator.css">
+  <title>Calorie Calculator</title>
+</head>
+<body>
+  <div class="calculator">
+    <h1>Calorie Calculator</h1>
+    <div class="input-group">
+      <label for="age">Age:</label>
+      <input type="number" id="age" required>
+    </div>
+    <div class="input-group">
+      <label for="gender">Gender:</label>
+      <select id="gender" required>
+        <option value="" disabled selected>Select your gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+    <div class="input-group">
+      <label for="weight">Weight (lbs):</label>
+      <input type="number" id="weight" required>
+    </div>
+    <div class="input-group">
+      <label for="heightFeet">Height (feet):</label>
+      <input type="number" id="heightFeet" required>
+    </div>
+    <div class="input-group">
+      <label for="heightInches">Height (inches):</label>
+      <input type="number" id="heightInches" required>
+    </div>
+    <div class="input-group">
+      <label for="activity">Activity Level:</label>
+      <select id="activity" required>
+        <option value="1.2" selected>Sedentary</option>
+        <option value="1.375">Lightly Active</option>
+        <option value="1.55">Moderately Active</option>
+        <option value="1.725">Very Active</option>
+        <option value="1.9">Super Active</option>
+      </select>
+    </div>
+    <div class="input-group">
+      <label for="goal">Goal:</label>
+      <select id="goal" required>
+        <option value="-1000">Lose 2 lbs/week</option>
+        <option value="-750">Lose 1.5 lbs/week</option>
+        <option value="-500">Lose 1 lb/week</option>
+        <option value="-250">Lose 0.5 lb/week</option>
+        <option value="0" selected>Maintain Weight</option>
+        <option value="250">Gain 0.5 lb/week</option>
+        <option value="500">Gain 1 lb/week</option>
+        <option value="750">Gain 1.5 lbs/week</option>
+        <option value="1000">Gain 2 lbs/week</option>
+      </select>
+    </div>
+    <div class="input-group">
+      <button onclick="calculateCalories()">Calculate</button>
+    </div>
+    <p id="result"></p>
+  </div>
+  <script src="scipts/calorie_calculator.js"></script>
+</body>
+</html>
