@@ -75,7 +75,7 @@ function createMarker(place, map) {
     // Request more detailed information for this place
     const request = {
         placeId: place.place_id,
-        fields: ['name', 'formatted_phone_number', 'formatted_address', 'rating']
+        fields: ['name','website', 'formatted_phone_number', 'formatted_address', 'rating']
     };
     const service = new google.maps.places.PlacesService(map);
     service.getDetails(request, (placeResult, status) => {
@@ -93,13 +93,22 @@ function addToSidebar(place) {
     const placeDiv = document.createElement('div');
     placeDiv.classList.add('place-entry'); // for styling
 
-    placeDiv.innerHTML = `
+    var content = `
         <h3>${place.name}</h3>
         <p>Phone: ${place.formatted_phone_number || 'Not available'}</p>
         <p>Address: ${place.formatted_address || 'Not available'}</p>
         <p>Google Rating: ${place.rating !== undefined ? place.rating + ' out of 5 stars': 'Not available'}</p>
     `;
 
+    // Check if the website property exists and add it to the content.
+    if (place.website) {
+        content += `<a href="${place.website}" target="_blank">Website</a>`;
+    } else {
+        content += "<p>No website available</p>";
+    }
+
+    placeDiv.innerHTML = content;
+    
     // Optional: Add a click listener to focus the map on the clicked place
     placeDiv.addEventListener('click', () => {
         map.setCenter(place.geometry.location);
