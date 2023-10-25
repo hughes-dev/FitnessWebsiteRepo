@@ -72,19 +72,32 @@ function createMarker(place, map) {
         infowindow.open(map, marker);
     });
 
-    addToSidebar(place);
+    // Request more detailed information for this place
+    const request = {
+        placeId: place.place_id,
+        fields: ['name', 'formatted_phone_number', 'formatted_address', 'rating']
+    };
+    const service = new google.maps.places.PlacesService(map);
+    service.getDetails(request, (placeResult, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+            // Now we add it to the sidebar with the detailed information
+            addToSidebar(placeResult);
+        }
+    });
 }
+
 
 // add a place entry to the sidebar
 function addToSidebar(place) {
     const sidebar = document.getElementById('sidebar');
     const placeDiv = document.createElement('div');
-    placeDiv.classList.add('place-entry'); // Optional: for styling
+    placeDiv.classList.add('place-entry'); // for styling
 
     placeDiv.innerHTML = `
         <h3>${place.name}</h3>
-        <p>${place.vicinity}</p>
-        <!-- You can add more details that you get from the 'place' object -->
+        <p>Phone: ${place.formatted_phone_number || 'Not available'}</p>
+        <p>Address: ${place.formatted_address || 'Not available'}</p>
+        <p>Google Rating: ${place.rating !== undefined ? place.rating + ' out of 5 stars': 'Not available'}</p>
     `;
 
     // Optional: Add a click listener to focus the map on the clicked place
