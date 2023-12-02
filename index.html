@@ -1,4 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-    <h2>Gym Page Project</h2>
+    <head>
+        <title>MO Fitness</title>
+        <style>
+            /* .header { 
+                border: 2px solid red;
+            }
+
+            .header .image {
+
+                background: url("/Users/twilson/Documents/Website Admin II/âPngtreeâfitness gym power mascot_6684813.png");
+                width: 100px;
+                height: 100px;
+                border: 2px solid green;
+            }
+
+            .header .text  {
+                font: x-large sans-serif;
+                border: 2px solid blue;
+            }
+
+            .header .image 
+            .header .text {
+                display: inline-block;
+                
+            }
+            */
+
+            .header {
+                background-color: black;
+                display: flex;
+                align-items: center;
+            }
+
+            .headimg {
+                font-size: 30px;
+                padding-left: 10px;
+            }
+            
+            .image {
+                width: 50px;
+                height: 50px;
+                float: left;
+                padding-right: 10px;
+            }
+
+            .headimg .image {
+                display: inline-block;
+
+            }
+
+            .pageList {
+                color: rgba(255, 255, 255, 0.874);
+                list-style-type: none;
+                display: inline;
+            }
+
+            .pagelistItem {
+                display: inline;
+                margin: 0px 20px 0px 0px;
+                font-size: x-large;
+
+            }
+
+            .eyeCatch {
+                text-align: center;
+                margin-top: -15px;
+                margin-bottom: -25px;
+            }
+
+            .eyeCatch h1 {
+                color: rgb(73, 73, 234);
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+
+            .eyeCatch1 {
+                color: gray;
+                margin-bottom: 3px;
+                font-family: sans-serif;
+                text-align: center;
+                text-decoration: wavy;
+                
+            }
+
+            .purpose {
+                background-color: white;
+            }
+
+            .typeText {
+                font-size: x-large;
+                text-align: center;
+                color: black;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                
+            }
+
+            a:link {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+            }
+
+            a:visited {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: grey;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+
+            .gymText {
+                text-align: right;
+                border: solid purple 2px;
+                color: white;
+                font-size: xx-large;
+                display: inline;
+                padding-left: 500px;
+            }
+
+            .gymText1 {
+                text-align: left;
+                border: solid purple 2px;
+                color: white;
+                font-size: xx-large;
+                display: inline;
+                padding-left: 100px;
+            }
+
+            .gymText1li {
+                display: inline-block;
+            }
+
+            .productShow {
+                background-color: black;
+                align-items: center;
+            }
+
+            .newsText {
+                color: white;
+                font-size: x-large;
+                padding-left: 80px;
+                display: inline-block;
+
+            }
+
+            .article1img {
+                width: 350px;
+                height: 200px;
+                padding-left: 25px;
+                padding-top: 10px;
+                display: inline;
+                margin-right: -5px;
+            }
+
+            .newsText1 {
+                font-size: x-large;
+                margin-left: 150px;
+                display: inline-block;
+
+            }
+
+            .article2img {
+                width: 350px;
+                height: 200px;
+                margin-left: 20px;
+                margin-right: 8px;
+                border-left: solid 2px white;
+                padding-left: 20px;
+
+            }
+
+            .newsText2 {
+                font-size: x-large;
+                margin-left: 130px;
+                display: inline-block;
+
+            }
+
+            .article3img {
+                width: 350px;
+                height: 200px;
+                margin-left: 10px;
+                border-left: solid 2px white;
+                padding-left: 20px;
+
+            }
+
+            .container {
+                display: flex;
+            }
+                
+
+            .whoIMG {
+                width: 600px;
+                max-height: 500px;
+                float: left;
+                background-color: black;
+
+            }
+
+            .whoText {
+                font-size: 20px;
+                float: right;
+                background-color: white;
+                margin-left: 60px;
+                margin-top: 45px;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
+            }
+
+            .whoText1 {
+                color: rgb(73, 73, 234);
+            }
+
+            .endPage {
+                background-color: black;
+            }
+        
+            
+        </style>
+    </head>
+
+    <body onload="typeWriter()">
+         
+        <div class="header">
+         <img class="image"; src="/Images/âPngtreeâfitness gym power mascot_6684813 copy.png" alt="Cartoon Bicep Picture">
+
+        <h2 class="headimg"; style="text-align: left; color:rgba(255, 255, 255, 0.874);"><a href="Web Admin II Blog Project.html"><strong>MO Fitness</strong></a></h2>
+
+        <ul class="pageList">
+            <li class="pagelistItem"><a href="https://www.google.com/"><strong>Products</strong></a></li> <li class="pagelistItem"><a href="calorie_calculator.html"><strong>Calorie Calculator</strong></a></li> <li class="pagelistItem"><a href="find_gyms.html"><strong>Find a Gym</strong></a></li>
+        </ul>
+        </div>
+
+        <div class="eyeCatch">
+            <h1>Find Yourself</h1>
+        </div>
+
+
+        <div class="purpose">
+
+
+        <span class="eyeCatch1"><p id="demo"></p></span>
+
+        <script>
+            var i = 0;
+            var txt = 'Take back your life';
+            var speed = 50;
+
+            
+            function typeWriter() {
+                if (i < txt.length) {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+             }
+        
+        }
+
+    
+        </script>
+
+
+
+        </div>
+        <h2 class="typeText">Articles</h2>
+
+    <div class="productShow">
+
+        <span>
+            <img class="article1img" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJ8AzQMBEQACEQEDEQH/xAAbAAEAAwEBAQEAAAAAAAAAAAACAAEDBQQGB//EAEIQAAEEAQIDBAcEBggHAAAAAAEAAgMRBAUSITFBBhNRgSIyYXGRobEUFTPBI0JScpLRByRDU2KC4fBUY4OisrPC/8QAGgEBAQEBAQEBAAAAAAAAAAAAAQACAwQFBv/EADURAAICAQIEAggEBwEBAAAAAAABAhEDBCEFEjFBE1EUIjJhcYGRoQYVsdEzNEJSweHwsiP/2gAMAwEAAhEDEQA/AO81q/Es/VM0a1ZM2MBACAQAg1BWINQFjDUBZdKIukASlEWGoZF7VESlFZNqism1RFUoiqSRVKEhCSDtUVhLUjYCEiEhIhLUiBzUiZkLQmrQsmWaALICAVYWMBFgIBZAVKIQCALpVkINQFl7VFZKQFl0oCbVESlESlEVShsm1I2EhRWEhNiVSiKISISE2NgISmNgITYhISRmWqGzRoUA2hAMYCzYDAQAgFEWAsgMNUDEAoLLpAF0orJSALpJEpQkpREpRFUgiUkrKpQ2EhJWEtUasJCbIohQgISiAQkbAQmzQCtENoWSZo0KbMjAWWAggBAIIYCjNiAQQqUBEAWAoiwFEXSgslKKyUorJSisraoSqURSiKISISEiEhQ2EikiEpEBCiA4LRozKRNGhZBmgHBBkQQAgEEMBQCQZEoC6URdIAsCkEywoC6VYEVZEpVkQhVkVSbEqlCVSiKISISFCVSSCQoUBwSjQOihA4LQgIUI2BQM0CAEAhgNoQZYgEAKlAIBAWWorIaHM0im3SMgkyImC3PHvrgPPovZh4fqcrXqNLzZzeWC7nhx9XjmdIHxmPaRtt7SXNIBDto9IXfUL05eEzg/4kfm6MvOl0TZt94s6Ryn3QTflGuf5fH+rNH6h4z/ALWX94t/u5POGYfWNXoEH0zR+peM/wC1k+8ogQHNaP8ArRt+TnA/JX5Xkfszi/mXpCXVM1bmQHnvZ7XRuDf4qr5rnPhmsir5L+FP/IrUY33NY5Y5RcT2vH+FwK8coSg6kqZ1Uk+jLBDuINj2LPQSJEpI2EhIhURRSIHBRpAIUICtCZuHFIobUAaBADaEBYwFAIIMiAUDEAgDKcTkAY+wEniXXwC74J4It+NG/n+pznzNeqzzfd7nztdk5UzwWkFkZ7tvTw9I8zzcV6fzKcI1giofBb/c5+BF+1uemLDxonteyCPcDzIs/EryPV5pSUpSb+Z08OKTSQoiXzZc3AOlndYbyG30P/m/NeniuRz1FeSX33/yWNJRSRsAV841YqSVk22KPEKAwfiY7nbjCzd4gUfiF0hny4/Yk18wcYvqjE4MYla9rnU1wO19P+Z9IeRC92PiuotLI1Je9HN6eF2tjnyYWbg58Mr5t0srXuEELNzAzhxdyN+Z51RX3NdHTTw1ldLs/IxzZbfLukemHVYyXjIjMYYaMo9Jl+3q3/MAvh5eGZox58Xrx937ftZuOojdS2Z7gQ5ocCCDyIN2vndOp3TsopNBKhKISISkTNyjSCQkQEcUkW1BM0AUwNGhBkQQBYUBoEGWKlAX0QAT+Kz3O/JXZkOlkn0MsYWJq/4ib/2OXu4n/NS+Ef8AyjMPZR6A1eEmy64kdRzTVAQhRBKDSDtLjQ8aAUouTUV3G6MWVJNLMACXOoO/wt4D8z5r38Rm/G8JPaCS+fczBbAMEcs0jnN9MEAObwcOHiF58WbJhp45UMoqSpozxsAY2TJMyU7HtA2bQBd3ZrgT0urXXU62WoiuZK13XczjxrH0PSRa8x1sJCjQSkglQgcEmkAqEBSJbeSiNGqYDCDLGgyWEExhRkQUAkAA/is9x/JXmRqL6c1kGAxxwND2v2Nc5znsPGySTYJ5cT1X6XHooapLPmi1J9vOtkzlclsfNZeXk5Ms5hy3w4LT6Uh4G6B2gn2HpS+lj0mnh7MF9DTVbs4ePHlTS5mNPFNp80Y3QSGQtdkg8bcbO4jlw6L11DbZP5HCrvsejs/2jztPw+61GQZHdjc5r7a/Zu9Zrv1gB06Uvm63hOHP62P1X9n8V2KE5RW59jgang6kwnCymS7fWA4Ee8Hivy+o0mfTv/6xq/udozjLobzTDHglmFFzGEsHi88Gj40vRw3E5Z1OS9WKbvsM+lFQx9zEyIGw1oF+K8U8niTc33dnRFM9eX94f+IR2RDUJRUQCkQlJoJUICkUZlRoJSJGqJmjUAxhRljQZLagmaDkoyWEAGVmZ3YdiYrcgnkBM1p+BX2tJwZ6jGsssiin7meXJqlCTjR8Z2j7W5ui57cbM0h0WS1m9m7J4bT+6K6L9DpPwjhyw5vSdvdH92eeWua/pO32U1nL1nSfvDKx48aIvO07y62tNOPIdeC8+XgWl0OdKM3NrzSSv6s74s0ssbaow1F+Rly4uO5sMcjoXSzuIJa1vievKvMr0pI7Rpbsy34UOnNkdAcfGMQaIZANszeQeR0vx5pVvYzs92cGfVhOySOeOefTXUWzBt90Ry2OPrCr5WuiXl1OLkc2Zpkxo8Bz3vjDS6GR3AhvOq+a6bGX0o7On9pnYWBHNDhYrcggtkzHsLnvdfL6cFynjU9pdBVLc+x0rJGp4EGZM5z5OZD3cGOHOhyX5PimfUxzSwylt2+B6MdVaR7vmvj2dTGCRj5MhrXAlklOAPFp2t5rrJNVZLc1R0IopEJUICk0UoQOSKMnKNBKRI1RM0BQAwoyxoMlhBDCjJFkhP2vbG0yw2Hcp8EStHPqCCv0vD9fhx4Iwcqa+PmfPzaaUpuVHxfaLsxPr3bjFLmQjTWY7DkZEcTmtppdbQCeZsDzX1Ia2OR8kMl/BnF6H1eeUq93mfa/Z44MaeBkREQjBY2qawcg0fVaZ6ls0jg4TZX4OXm6rNHLBO8YjOFFzWu2mzf7XDyWjcqUq8jw67G7P1+DQ5Id8TG75GE0DCwCx7rLW+a0tk2Zk06RzNcJbO5zst0eOAA/ftqM3VeFLS6blNPp2OXhSwZGMG4+TG7Kwy7u7HoysWrZhe4DZ448eWSfu4mcC8Ntrd18DR69OCgR9t2OyhJpk7DPAxrJTtlkdtYLHU+8H4r4HEtF6RrIRTrmXx6M6Qnyxb6m2dhdpc5/d6VqWhOYWkgRucSeXXzTDguHH1bf2Onj417SaPhe0urdp+zOpR4eoS4rJhGJI+5jaW7CSOfvB4Lr+X6bdNfc9UHhyR5oWebH/pL11oG+HDmA/ajI+hC3H8PRy+xGRxnPHHq6P1tpJY0mrIBNL8q1To0iigQFJoJUIXJFGTlGglIlNUTNGlADBUZYgUAK1AIFAMQKDIuCCEWNdjTd47aALB8D0X2+Cxrnl8EcsnVJGGryua5r2u2hzP1utj/ZX37sMcd9zPS4oo+y0EkjW07fIA7wc9zr/wC61GZ75WfN5OdNPqWBqun400zMKV3eSE7e+jILXho5u5k+8BdF0ozJcx4O1WJj5Ebc+B/9We5shZfovojp4rUH2CSBkCGOWF0LWxbBbX3XEEA8faCUWyUUcmeIahM/Mkcz7LC49yB1PV38lqLonv1P0LsbA/D09krnvxu+cXtMbQS1tADgV8DPrsUeIKUn6sVV+9hPHJ4mkdfIH2mdply8DIbsdwysC+o67h9F9fHxLTy9nJ96PD4eWG6VH5l/SHpGbm9qGjA0+BwGKzjhxks5u58AAfZ7l78XG8Wkx8vqt+bf+jz5PGnLaLf1Obgdhddna0ysjgF3Urhw8ha8ef8AFbppS+i/c3HQ6iTTpL4n60BtaBw4DovwzPvLogkoNBKTQSoQFIozco0ApEjVEMKYCCCGCoyWCgCwUEWHKChBygoVxOBbPC2aIcTG4WLXv4frPR5uMvZZznC1scvX3ukka+KaBsQqo6oj2L9NGSlugxeo9zywS5ef2WxIcOAyuaZIGuY70SGPc0Wenqi1pVe4S5YydA17LzsTDhhdigOYxkW7FlbXhwuqC3Hqcn7JyXxHF/quSAJeJLd++jz5rV2SRz4oG5WK3I1aOIua4mKMeqGj9Y31PRIVZ5ZXNaePdRQ7g7aeII8T/votpOWxl1Hc/RINc0icNEGoYzqFD9IB9V+Ky8O1sG3PG/odIZsUv6ke/mvBR6CJREKUiCVoQkqEKRCVCAlJpGZSISkSmqI0CALCmQwgyWoi0ES1BRLQRjlfpTDDucwPLiXN58KofMr6WmyPBpnlglzJpb+RivWPmdSyH4eU3HjHenIkMTWygEcOpvly6L9jotIs2GOSU7bXbt97Pg5uL5IZJRcKS8+5nj5GqabiZEOLghxe/vGGCcVdUbFCuV8OtrvLh3fmMrjuJ9YnI1PL1SPs5FkahE+PIlyJGsjB4kCuJPvPwC5PTVl5InshrovB4kulnixM+CQg5Mrw549Jsj+J9ntCJaXKukRhrMEt+Y9wZqGoFztN06aYubtZM5nogeItcZTwYf4+RL3dwnnnL+FBv39gx9hNalifLmZEcbAC93eTOe40L5Dh81xfHeH45JY4uT/7zPO9Jq8kfXlRv2U7K6bqmiw6pn5MjO8Lv0bSGgUSOdX0WeK8c1Ol1EsGKK2rf5fTuWk4fDNBZJNn3n3ngsaGiawBXAEr8a8WSTbaPurFJKjObV4GtuCpT+8G/VKwPubWJtnOk1zIcbYyNg8Ktd1p40dFhijB2sZp5Sge5oW1gga8OJi/U8w88l/lS2sUPIeSPkRmrZrP7bcPBzQUPDB9i5Ino+/5A0foAXdSXc1j0VN9TPhmbtenPKGP5pWmj5lyGTtdyP7uL5/zWvR4+bHlRm7XMm/w4vmtejQLlPoWleAyxgoMiBUQwUEJRkiCKKhQSTxQRjOdsmMTzL31/Cvdj/k8nxRh+2cvtYd3Z3O/aERINcQfEL6H4b/n0vdI+dxulpL98f1PTBj4z8aJ3dNBLASW8L4Lz/m2vwZJcmZ7N97/AFs7PhejyRTeNfQ88+n4uZ9nhy4zNFE+Uta4ngbb/Nfa4jrtRiwwzY5VKSjbXwPJoNLhlGWJraMpfqeqHCw8WNzMfFhhY4UdjA0nzX5v07VSmsjyNtbrv+p9RaTByOHKqfWtjzOn07SsZkTsh0cTBTIxM40PANBVJ59Tkc5K2/cv2OsMcMcVGOyRxdQ7SGWN8en4TdpBAfkcz7udL2YNLyyUsku/YzPdOkcrQjNh6bDjyg7mXYBscyV7uI5YZ9TLJDo6/QxoMUsGBQl1V/qdVspPE38V4KPaLvEURe+woitxUJRKgCXJEJKQAXAdRagLbFLJ+HFI73NKrS6shjTc13EY7x76CPFh5haPqmlfNCjQFBgQKgECghAoChAqAs8vagjn6tDkzwsZjQW4ese8Atfa0Wt0uGCjKO/d1Zhxk7aZzsfD1pk0Dy6Esiv0JZSRxFHkFvVa3R5MLxxi1fu/2EYyu2e3MwJc/EkxsvuhHI2nd3f1Xz9Jq3o8vi4uvTf3lqMGPU4/DydNn9NwDTZWxtZ9tmIaKAuuHkQuUs0ZNvl3Z3WyoEuK8fZoHuaXudK4XLW4UznwK+1rNTjzaPHPH0jS6d0j5+kxSwzyKXeTa+bGzSjzdFBfiaJ+QC+N4q/7/me+0aHRmSUJGQurkHBzgPi5CzyXT/AWZP7O4JfuJDPEM9EfmtrVZEXNRl9wYTTYyiB4cCtekz8jSm/I1j0bT285ZZPYP9AsvPkfYueRc+k4hhf9mZP3leiCDV/BSzT7kpvueKDRMx7h3jWxNviS8H6Lo88Oxt5F2OgNCxOr5r8LC4+kSMeIy/uTD/5v8aPSJFzyENIwR/ZE+95V48y5mMYGG31caLzbf1WXkm+5WzRscTPUjY33NAQ5SfciOKhASkQtULG0rIUMFBkYKgLQQgUEIFRllqItQEQQJGFzfR59FdTSaXU5HaLDysl2I7S8aQTwEHvd7AAevM38l+hxa7SR0/hPy6HncJN2/MqLC1t/42WGf5/5BfKc8C6RPVzQOtFjMbE0SgPeOZNm/iSvM5b7HOzQQxN5RsHki2VsQAHIAIsiWoiiVEUSoUg7lDQCUiVahCSkgkpIzJWjQSVCimlJDBQQwUGWIFADCALQQgUEIFRktRFqAu1ES1EXagKJUJLURVqIq1CUSoUAlQlFRFFJBJTQgcU0ICUiElIgJSRTSoaNAVAIFDBoQKCoYKyZECoi1AWCiiECgi7UFF7lFRNygou1FRW5RUS1EkUSoaKJUIbTREtRBJSISVEElI0AlIhJSICU0JmTxSRTStUJo0rIMYKAECghArIDBVQC3IAu1EXaCLtVAS1URLQRdqIlpoirVREtVEVaSKKBKJSQSVEAuWjVFEpIJKRASoQErRGZKRP/2Q==">
+            <img class="article2img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROBZt2mg26jf0uWT8eyJjLvZjiGZPGHc1nx-qX9NcsYlTev0D0qedoTNUEaEp5pPVVQL4&usqp=CAU">
+            <img class="article3img" src="https://static01.nyt.com/images/2016/12/14/well/move/14physed-running-photo/14physed-running-photo-superJumbo.jpg">
+        </span>
+        <div>
+            <a class="newsText"; href="https://www.washingtonpost.com/wellness/2023/04/05/exercise-brain-thinking-bdnf/">How Exercise Leads to<br> &nbsp;&nbsp;&nbsp;&nbsp;a Healthier Brain</a>
+            <a class="newsText1"; href="https://www.forbes.com/health/body/how-to-lose-weight-fast/">Tips for Quick Weight Loss, <br> &nbsp;&nbsp;&nbsp;&nbsp;According to Experts</a>
+            <a class="newsText2"; href="https://www.nytimes.com/2022/04/06/well/move/30-minutes-exercise.html">Is 30 Minutes of Exercise <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a Day Enough?</a>
+        </div>
+            <br><br>
+
+     </div>
+
+        <div class="container">
+            <div class="containIMG">
+                <img class="whoIMG" src="https://ucarecdn.com/7e516d7e-47f8-4ff0-bfac-32175764dbdc/-/format/auto/-/preview/3000x3000/-/quality/lighter/promix-athlete-pre-workout-torokhtiy.jpg"
+            </div>
+            <div class="whoText">
+                <h1><span class="whoText1">WHO</span> WE ARE</h1>
+                <p>We are MO Fitness! We created this to provide you with<br> the tools to help you achieve your fitness and health goals.<br>From up to date articles on the latest fitness trends, 
+                    to <br> tools such as our calorie calculator and gym locator. <br>Excuses should no longer be an option. 
+                <br><br>
+                Prepare to build your mind, body <br><br> and <span class="whoText1">Take Back Your Life</span>
+                </p>
+            </div>
+        </div>
+
+
+
+    </body>
+
 </html>
